@@ -12,7 +12,7 @@ Notebooks and datasets to accompany this textbook can be found at: https://githu
 The Python Notebook was created under the following conda environment:
 
 ```
-conda create --name shortcourse python=3.7.9 numpy pandas jupyter matplotlib pycairo
+conda create --name shortcourse python=3.7.9 numpy pandas jupyter matplotlib pycairo scikit-learn
 source activate shortcourse
 pip install igraph
 pip install partition-igraph
