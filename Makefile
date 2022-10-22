@@ -25,66 +25,10 @@ unfinished:
 check_requirements: check_installation
 	@$(PYTHON_INTERPRETER) scripts/am_i_ready.py
 
-.PHONY: data
-data: datasets
-
-.PHONY: raw
-raw: datasources
-
-.PHONY: datasources
-datasources: .make.datasources
-
-.make.datasources: catalog/datasources/*
-	$(PYTHON_INTERPRETER) -m $(MODULE_NAME).workflow datasources
-	#touch .make.datasources
-
-.PHONY: datasets
-datasets: .make.datasets
-
-.make.datasets: catalog/datasets/* catalog/transformers/*
-	$(PYTHON_INTERPRETER) -m $(MODULE_NAME).workflow datasets
-	#touch .make.datasets
-
 .PHONY: clean
 ## Delete all compiled Python files
 clean:
 	$(PYTHON_INTERPRETER) scripts/clean.py
-
-.PHONY: clean_interim
-clean_interim:
-	$(RM) data/interim/*
-
-.PHONY: clean_raw
-clean_raw:
-	$(RM) data/raw/*
-
-.PHONY: clean_processed
-clean_processed:
-	$(RM) data/processed/*
-
-.PHONY: clean_workflow
-clean_workflow:
-	$(RM) catalog/datasources.json
-	$(RM) catalog/transformer_list.json
-
-.PHONY: test
-
-## Run all Unit Tests
-test: update_environment
-	$(SET) LOGLEVEL=DEBUG; pytest --pyargs --doctest-modules --doctest-continue-on-failure --verbose \
-		$(if $(CI_RUNNING),--ignore=$(TESTS_NO_CI)) \
-		$(MODULE_NAME)
-
-## Run all Unit Tests with coverage
-test_with_coverage: update_environment
-	$(SET) LOGLEVEL=DEBUG; coverage run -m pytest --pyargs --doctest-modules --doctest-continue-on-failure --verbose \
-		$(if $(CI_RUNNING),--ignore=$(TESTS_NO_CI)) \
-		$(MODULE_NAME)
-
-.PHONY: lint
-## Lint using flake8
-lint:
-	flake8 $(MODULE_NAME)
 
 .phony: help_update_easydata
 help_update_easydata:
