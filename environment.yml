@@ -1,0 +1,18 @@
+name: MiningComplexNetworks_2022
+channels:
+  - defaults
+dependencies:
+  - pip
+  - pip:
+    - igraph
+    - partition-igraph
+  - git>=2.5  # for git worktree template updating
+  - matplotlib
+  - numpy
+  - jupyter
+  - scikit-learn
+  - scipy
+  - nb_conda_kernels   # Try <2.2.0  if you hit nb_conda_kernels issue #158
+  - pandas
+  - pathlib
+  - python=3.7.9
