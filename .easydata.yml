@@ -1,0 +1,11 @@
+default_context:
+  author_name: FT
+  conda_path: ~/anaconda3/bin/conda
+  default_branch: main
+  description: 'Supporting materials for a course on mining complex networks based on the textbook. '
+  module_name: src
+  open_source_license: MIT
+  project_name: Mining Complex Networks 2022 Course
+  python_version: '3.7'
+  repo_name: MiningComplexNetworks_2022
+  upstream_location: github.com
