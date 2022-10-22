@@ -5,6 +5,8 @@ dependencies:
   - pip
   - pip:
     - igraph
+    - nbdime
+    - nbval
     - partition-igraph
   - git>=2.5  # for git worktree template updating
   - matplotlib
