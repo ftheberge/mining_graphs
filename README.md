@@ -1,4 +1,4 @@
-# MiningComplexNetworks_2022
+# Mining Complex Networks - Practical Methods for Mining Graphs using Python-igraph
 Material for short course on Mining Complex Networks
 
 # Reference Book
@@ -12,10 +12,16 @@ Notebooks and datasets to accompany this textbook can be found at: https://githu
 The Python Notebook was created under the following conda environment:
 
 ```
-conda create --name shortcourse python=3.7.9 numpy pandas jupyter matplotlib pycairo scikit-learn
-source activate shortcourse
+conda create --name mining_graphs python=3.7.9 numpy pandas jupyter matplotlib pycairo scikit-learn
+source activate mining_graphs
 pip install igraph
 pip install partition-igraph
 
-python -m ipykernel install --user --name=shortcourse ## add to Jupyter
+python -m ipykernel install --user --name=mining_graphs ## add to Jupyter
+```
+
+The environment can be optionally created, managed and maintained reproducibly using `make` commands. To create and activate the conda enironment:
+```
+make create_environment
+source activate mining_graphs
 ```
