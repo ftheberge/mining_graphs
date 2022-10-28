@@ -5,7 +5,7 @@ default_context:
   description: 'Supporting materials for a course on mining complex networks based on the textbook. '
   module_name: src
   open_source_license: MIT
-  project_name: Mining Complex Networks 2022 Course
-  python_version: '3.7'
-  repo_name: MiningComplexNetworks_2022
+  project_name: Mining Complex Networks - Practical Methods for Mining Graphs using Python-igraph
+  python_version: '3.7.9'
+  repo_name: mining_graphs
   upstream_location: github.com
