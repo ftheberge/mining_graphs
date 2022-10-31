@@ -1,4 +1,4 @@
-name: MiningComplexNetworks_2022
+name: mining_graphs
 channels:
   - defaults
 dependencies:
