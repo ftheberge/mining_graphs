@@ -20,7 +20,7 @@ pip install partition-igraph
 python -m ipykernel install --user --name=mining_graphs ## add to Jupyter
 ```
 
-The environment can be optionally created, managed and maintained reproducibly using `make` commands. To create and activate the conda enironment:
+The environment can be optionally created, managed and maintained reproducibly using `make` commands. To create and activate the conda environment:
 ```
 make create_environment
 source activate mining_graphs
