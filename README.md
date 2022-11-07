@@ -1,7 +1,7 @@
 # Mining Complex Networks - Practical Methods for Mining Graphs using Python-igraph
 Material for short course on Mining Complex Networks
 
-# Reference Book
+## Reference Book
 
 "Mining Complex Networks" (https://www.ryerson.ca/mining-complex-networks) by B. Kaminski, P. Pralat and F. Théberge.
 
@@ -25,3 +25,9 @@ The environment can be optionally created, managed and maintained reproducibly u
 make create_environment
 source activate mining_graphs
 ```
+
+## Other references
+
+python-igraph documentation: https://igraph.readthedocs.io/en/0.10.2/
+
+introductory guide: https://towardsdatascience.com/newbies-guide-to-python-igraph-4e51689c35b4
